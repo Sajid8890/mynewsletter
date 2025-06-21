@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Webpage</title>
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+<style>
+*{
+padding: 0;
+margin: 0;
+}
+html{
+    background-color: #000;
+}
+.f12{
+font-size: 12px;
+}
+.f17{
+font-size: 17px;
+}
+.f16{
+font-size: 16px;
+}
+.f18{
+font-size: 18px;
+}
+.f20{
+font-size: 20px;
+}
+.f40{
+font-size: 40px;
+}
+.f50{
+    font-size: 50px;
+}
+.f67{
+    font-size: 67px;
+}
+#text-2, #text-4{color: #fff;}
+#text-3, #text-5,  #text-13,  #text-15{color: #1700c7;}
+#text-6, #text-25, #text-30{color: rgb(0, 255, 162); font-weight: 600;}
+.margin-top{
+margin-top: 30px;
+}
+.margin-top-x{
+margin-top: 15px;
+}
+.uppercase {
+text-transform: uppercase;
+letter-spacing: -1.5px;
+}
+.body-bg-image {
+position: absolute;
+top: 38%;
+left: 50%;
+min-width: 70%;
+min-height: 45%;
+transform: translate(-50%, -50%);
+background-image: url('./images/bg-img.png');
+background-size: cover;
+background-position: center;
+z-index: -9999;
+opacity: 25%;
+}
+@font-face {
+font-family: Oswald;
+src: url(https://framerusercontent.com/third-party-assets/fontshare/wf/4BEU2H62BE4J563L6WLMVQKHOL2QMEWK/KH4J4NPLOSGQTTA3TD7LQA62CQTZ5NMO/J6GZW3TVVNILH7PYSPMC3JPNPGFXNPSF.woff2);
+font-display: swap;
+font-style: normal;
+font-weight: 700;
+}
+@font-face {
+font-family: Inter;
+src: url(https://app.framerstatic.com/Inter-SemiBoldItalic.vietnamese-5ZFOV65G.woff2);
+font-display: swap;
+font-style: italic;
+font-weight: 600;
+unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+font-family: Just Dance Bold;
+src: url(https://framerusercontent.com/assets/Gy5uAYJvADdqCf4r4VQkaQVyks8.woff);
+font-display: swap;
+}
+.oswald{
+font-family: Oswald;
+}
+.just-dance-bold{
+font-family: Just Dance Bold;
+}
+.inter{
+font-family: Inter;
+}
+body{
+max-width: 660px;
+margin: 20px auto;
+background-color: #000;
+color: #fff;
+font-family: Inter;
+}
+header{
+text-align: center;
+}
+#text-1{
+width: auto;
+display: inline-block;
+padding: 2px 10px;
+border-radius: 30px;
+border: 2px dashed green;
+background-color: rgba(0, 128, 0, 0.285);
+font-weight: 500;
+}
+.slide-button {
+position: relative;
+display: inline-block;
+padding: 10px 10px;
+font-size: 16px;
+border: none;
+background-color: rgb(0, 255, 162);
+color: #000;
+cursor: pointer;
+border-radius: 6px;
+box-shadow: 0px 0px 7px 0px rgb(0, 255, 162);
+overflow: hidden;
+transition: .7s;
+width: 300px;
+height: 45px;
+}
+.slide-button .content {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 8px;
+position: relative;
+height: 100%;
+transition: transform 0.3s ease;
+}
+.slide-button .icon,
+.slide-button .text {
+transition: transform 0.3s ease;
+display: flex;
+align-items: center;
+}
+.slide-button .icon {
+width: 25px;
+height: 25px;
+background-color: #000;
+border-radius: 50%;
+justify-content: center;
+}
+.slide-button svg {
+width: 20px;
+height: 20px;
+fill: white;
+}
+.slide-button:hover{
+background-color: #fff;
+color: #000;
+}
+.slide-button:hover .icon {
+transform: translateX(230px);
+}
+
+.slide-button:hover .text {
+transform: translateX(-30px);
+}
+.slider-container {
+width: 660px;
+overflow: hidden;
+}
+.slider-track {
+display: flex;
+width: fit-content;
+animation: slide-left 15s linear infinite;
+}
+.slider-track li {
+text-decoration: none;
+list-style: none;
+min-width: 250px;
+text-align: center;
+margin-right: 50px;
+}
+@keyframes slide-left {
+0% { transform: translateX(0); }
+100% { transform: translateX(-50%); }
+}
+.slider-container svg{
+width: 25px;
+height: 25px;
+margin-right: 10px;
+}
+.mbox1, .mbox2, .mbox3{
+width: 100%;
+background-color: #121212;
+height: min-content;
+display: flex;
+flex-direction: row;
+border-radius: 10px;
+overflow: hidden;
+}
+.imgpart{
+background-size: cover;
+background-position: center;
+width: 50%;
+}
+.textpart{
+width: 50%;
+}
+.textpart .inner{
+padding: 40px 20px;
+}
+.textpart-listelement{
+display: flex;
+flex-direction: row;
+align-items: top;
+margin-top: 20px;
+}
+.textpart-listelement .icon{
+margin-right: 10px;
+display: flex;
+align-items: top;
+justify-content: center;
+}
+.mbox1 .imgpart{
+background-image: url('./images/img1.jpg');
+background-size: cover;
+background-position: center;
+width: 50%;
+}   
+.mbox2 .imgpart{
+background-image: url('./images/img2.jpg');
+background-size: cover;
+background-position: center;
+width: 50%;
+}
+.mbox3{
+flex-direction: column;
+text-align: center;
+}
+.mbox3 .inner{
+padding: 40px 20px;
+}
+.mbox3 .twoboxes-container{
+display: flex;
+gap: 20px;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+}
+.mbox3 .twoboxes-left, .mbox3 .twoboxes-right{
+width: 50%;
+padding: 20px;
+text-align: left;
+}
+.mbox3 .twoboxes-left{
+background-color: #ff5c5c1c;
+color: #fff;
+}
+.mbox3 .twoboxes-right{
+background-color: #00ffA214;
+color: #fff;
+}
+.mbox3 .slide-button{
+    margin: 0 auto;
+}
+.dropdowns-container {
+width: 100%;
+max-width: 600px;
+margin: auto;
+}
+.dropdown {
+    background-color: #0f0f0f;
+    overflow: hidden;
+    border: .1px solid #cccccc27;
+
+}
+.dropbtn {
+    width: 100%;
+    padding: 20px;
+    background-color: transparent;
+    color: #fff;
+    text-align: left;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.dropdown-content {
+    display: none;
+    text-align: left;
+    padding: 10px 20px;
+}
+
+.dropdown.active .dropdown-content {
+    display: block;
+}
+.active{
+    background-color: #ffffff0f;
+}
+.dropbtn .icon {
+font-size: 20px;
+transition: 0.3s ease;
+}
+.dropdown.active .icon {
+content: '×';
+}
+footer{
+text-align: center;
+color: #5e5e5e;}
+
+
+
+
+
+
+
+
+
+@media (max-width: 500px) {
+.body-bg-image {
+    position: absolute;
+    top: 4%;
+    left: 50%;
+    min-width: 120%;
+    min-height: 60%;
+    transform: translate(-50%, -50%);
+    background-image: url('./images/bg-img.png');
+    background-size: cover;
+    background-position: center;
+    z-index: -9999;
+    opacity: 25%;
+    }
+
+.slider-container {
+    width: 80%;
+    margin: 30px auto;
+    overflow: hidden;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #121212;
+}
+
+.slider-track {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    animation: none;
+}
+
+.slider-track li {
+    text-decoration: none;
+    list-style: none;
+    min-width: 0px;
+    text-align: left;
+    margin-right: 0;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+@keyframes slide-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+.slider-container svg{
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+.mbox1{
+    width: 90%;
+    margin: 0 auto;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    align-items: top;
+    height: 700px;
+    border-radius: 30px;
+}
+.mbox2{
+    width: 90%;
+    margin: 0 auto;
+    flex-direction: column;
+    height: 700px;
+    border-radius: 30px;
+}
+.textpart{
+    min-width: 100%;
+    text-align: center;
+}
+.mbox2 .textpart{
+    min-width: 100%;
+    text-align: left;
+}
+.imgpart{
+    min-width: 100%;
+    height: 40%;
+}
+.mbox3{
+    width: 90%;
+    margin: 0 auto;
+}
+}
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-up,
+.slide-down {
+  opacity: 0; /* hidden at first */
+}
+
+.slide-up.run {
+  animation: slide-up 1s ease forwards;
+}
+
+.slide-down.run {
+  animation: slide-down 0.5s ease forwards;
+}
+</style>
+</head>
+<body>
+<header>
+    <div>
+        <p id="text-1" class="f15 oswald margin-top uppercase slide-down">TEXT1</p>
+    </div>
+    <div>
+        <h1 class="just-dance-bold f67 margin-top uppercase"><font id="text-2">text2</font><font id="text-3"> text3</font><font id="text-4"> text4</font><font id="text-5"> text5</font></h1>
+    </div>
+    <div>
+        <p class="f20 inter margin-top"><font id="text-6">text6</font><br><font id="text-7">text7</font></p>
+        <button class="slide-button f15 margin-top slide-down">
+        <div class="content">
+            <div class="icon">
+            <svg viewBox="0 0 24 24">
+                <path d="M10 17l5-5-5-5v10z"/>
+            </svg>
+            </div>
+            <div class="text">Registrovat se 100% ZDARMA</div>
+        </div>
+        </button>
+    </div>
+    <div class="slider-container oswald margin-top f15">
+        <ul class="slider-track uppercase">
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 22px; height: 22px; fill: #1700c7; display: inline-block; vertical-align: middle;" focusable="false" color="var(--token-5c149711-265d-4bcd-a011-9af22561241a, rgb(227, 53, 36))" style="user-select: none; width: 100%; height: 100%; display: inline-block; fill: var(--token-5c149711-265d-4bcd-a011-9af22561241a, rgb(227, 53, 36)); color: var(--token-5c149711-265d-4bcd-a011-9af22561241a, rgb(227, 53, 36)); flex-shrink: 0;"><g color="var(--token-5c149711-265d-4bcd-a011-9af22561241a, rgb(227, 53, 36))" weight="regular"><path d="M245.11,60.68c-7.65-13.19-27.84-16.16-58.5-8.66A95.93,95.93,0,0,0,32,128a98,98,0,0,0,.78,12.31C5.09,169,5.49,186,10.9,195.32,16,204.16,26.64,208,40.64,208a124.11,124.11,0,0,0,28.79-4A95.93,95.93,0,0,0,224,128a97.08,97.08,0,0,0-.77-12.25c12.5-13,20.82-25.35,23.65-35.92C248.83,72.51,248.24,66.07,245.11,60.68ZM128,48a80.11,80.11,0,0,1,78,62.2c-17.06,16.06-40.15,32.53-62.07,45.13C116.38,171.14,92.48,181,73.42,186.4A79.94,79.94,0,0,1,128,48ZM24.74,187.29c-1.46-2.51-.65-7.24,2.22-13a79.05,79.05,0,0,1,10.29-15.05,96,96,0,0,0,18,31.32C38,193.46,27.24,191.61,24.74,187.29ZM128,208a79.45,79.45,0,0,1-38.56-9.94,370,370,0,0,0,62.43-28.86c21.58-12.39,40.68-25.82,56.07-39.08A80.07,80.07,0,0,1,128,208ZM231.42,75.69c-1.7,6.31-6.19,13.53-12.63,21.13a95.69,95.69,0,0,0-18-31.35c14.21-2.35,27.37-2.17,30.5,3.24C232.19,70.28,232.24,72.63,231.42,75.69Z"></path></g></svg><font id="text-8">text8</font></li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 22px; height: 22px; fill: #1700c7;display: inline-block; vertical-align: middle;" focusable="false" color="var(--token-5c149711-265d-4bcd-a011-9af22561241a, rgb(227, 53, 36))" style="user-select: none; width: 100%; height: 100%; display: inline-block; fill: var(--token-5c149711-265d-4bcd-a011-9af22561241a, rgb(227, 53, 36)); color: var(--token-5c149711-265d-4bcd-a011-9af22561241a, rgb(227, 53, 36)); flex-shrink: 0;"><g color="var(--token-5c149711-265d-4bcd-a011-9af22561241a, rgb(227, 53, 36))" weight="regular"><path d="M128,88a40,40,0,1,0,40,40A40,40,0,0,0,128,88Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,152ZM240,56H16a8,8,0,0,0-8,8V192a8,8,0,0,0,8,8H240a8,8,0,0,0,8-8V64A8,8,0,0,0,240,56ZM193.65,184H62.35A56.78,56.78,0,0,0,24,145.65v-35.3A56.78,56.78,0,0,0,62.35,72h131.3A56.78,56.78,0,0,0,232,110.35v35.3A56.78,56.78,0,0,0,193.65,184ZM232,93.37A40.81,40.81,0,0,1,210.63,72H232ZM45.37,72A40.81,40.81,0,0,1,24,93.37V72ZM24,162.63A40.81,40.81,0,0,1,45.37,184H24ZM210.63,184A40.81,40.81,0,0,1,232,162.63V184Z"></path></g></svg><font id="text-9">text9</font></li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 22px; height: 22px; fill: #1700c7; display: inline-block; vertical-align: middle;" focusable="false" color="var(--token-5c149711-265d-4bcd-a011-9af22561241a, rgb(227, 53, 36))" style="user-select: none; width: 100%; height: 100%; display: inline-block; fill: var(--token-5c149711-265d-4bcd-a011-9af22561241a, rgb(227, 53, 36)); color: var(--token-5c149711-265d-4bcd-a011-9af22561241a, rgb(227, 53, 36)); flex-shrink: 0;"><g color="var(--token-5c149711-265d-4bcd-a011-9af22561241a, rgb(227, 53, 36))" weight="regular"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></g></svg><font id="text-10">text10</font></li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 22px; height: 22px; fill: #1700c7; display: inline-block; vertical-align: middle;" focusable="false" color="var(--token-5c149711-265d-4bcd-a011-9af22561241a, rgb(227, 53, 36))" style="user-select: none; width: 100%; height: 100%; display: inline-block; fill: var(--token-5c149711-265d-4bcd-a011-9af22561241a, rgb(227, 53, 36)); color: var(--token-5c149711-265d-4bcd-a011-9af22561241a, rgb(227, 53, 36)); flex-shrink: 0;"><g color="var(--token-5c149711-265d-4bcd-a011-9af22561241a, rgb(227, 53, 36))" weight="regular"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></g></svg><font id="text-11">text11</font></li>
+        </ul>
+        </div>
+        <br><br><br>
+</header>
+<main>
+    <div class="body-bg-image"></div>
+    <div class="mbox1 slide-up">
+        <div class="textpart">
+            <div class="inner">
+                <h2 class="f50 just-dance-bold uppercase"><font id="text-12">text12</font><font id="text-13"> text13</font><font id="text-14"> text14</font></h2>
+                <div id="text-15" class="f17 oswald margin-top-x uppercase">text15</div>
+                <div class="f15 inter">
+                    <div class="textpart-listelement">
+                        <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" style="width: 22px; height: 22px; fill: #1700c7; display: inline-block; vertical-align: middle;" focusable="false" viewBox="0 0 24 24" color="var(--token-1f6b6ba9-6b5e-47fd-acf6-4c5572fd8bdd, rgb(227, 53, 36))" style="user-select: none; width: 100%; height: 100%; display: inline-block; fill: var(--token-1f6b6ba9-6b5e-47fd-acf6-4c5572fd8bdd, rgb(227, 53, 36)); flex-shrink: 0;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path></svg></div>
+                        <p id="text-16">text16</p>
+                    </div>
+                    <div class="textpart-listelement">
+                        <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" style="width: 22px; height: 22px; fill: #1700c7; display: inline-block; vertical-align: middle;" focusable="false" viewBox="0 0 24 24" color="var(--token-1f6b6ba9-6b5e-47fd-acf6-4c5572fd8bdd, rgb(227, 53, 36))" style="user-select: none; width: 100%; height: 100%; display: inline-block; fill: var(--token-1f6b6ba9-6b5e-47fd-acf6-4c5572fd8bdd, rgb(227, 53, 36)); flex-shrink: 0;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path></svg></div>
+                        <div id="text-17">text17</div>
+                    </div>
+                    <div class="textpart-listelement">
+                        <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" style="width: 22px; height: 22px; fill: #1700c7; display: inline-block; vertical-align: middle;" focusable="false" viewBox="0 0 24 24" color="var(--token-1f6b6ba9-6b5e-47fd-acf6-4c5572fd8bdd, rgb(227, 53, 36))" style="user-select: none; width: 100%; height: 100%; display: inline-block; fill: var(--token-1f6b6ba9-6b5e-47fd-acf6-4c5572fd8bdd, rgb(227, 53, 36)); flex-shrink: 0;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path></svg></div>
+                        <div id="text-18">text18</div>
+                    </div>
+                    <div class="textpart-listelement">
+                        <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" style="width: 22px; height: 22px; fill: #1700c7; display: inline-block; vertical-align: middle;" focusable="false" viewBox="0 0 24 24" color="var(--token-1f6b6ba9-6b5e-47fd-acf6-4c5572fd8bdd, rgb(227, 53, 36))" style="user-select: none; width: 100%; height: 100%; display: inline-block; fill: var(--token-1f6b6ba9-6b5e-47fd-acf6-4c5572fd8bdd, rgb(227, 53, 36)); flex-shrink: 0;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path></svg></div>
+                        <div id="text-19">text19</div>
+                    </div>
+                    <div class="textpart-listelement">
+                        <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" style="width: 22px; height: 22px; fill: #1700c7; display: inline-block; vertical-align: middle;" focusable="false" viewBox="0 0 24 24" color="var(--token-1f6b6ba9-6b5e-47fd-acf6-4c5572fd8bdd, rgb(227, 53, 36))" style="user-select: none; width: 100%; height: 100%; display: inline-block; fill: var(--token-1f6b6ba9-6b5e-47fd-acf6-4c5572fd8bdd, rgb(227, 53, 36)); flex-shrink: 0;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path></svg></div>
+                        <div id="text-20">text20</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="imgpart"></div>
+    </div>
+    <br><br>
+    <div class="mbox2 margin-top slide-up">
+        <div class="imgpart"></div>
+        <div class="textpart">
+            <div class="inner">
+                <h2 class="f50 just-dance-bold uppercase" id="text-21">text21</h2>
+                <br><br>
+                <p id="text-22" class="f15 inter">text22.</p>
+                <br>
+                <p id="text-23" class="f15 inter">text23.</p>
+                <br>
+                <p class="f15 inter"><font id="text-24">text24</font><font id="text-25"> text25</font><font id="text-26"> text26</font></p>
+                <br>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <div class="mbox3 margin-top slide-up">
+        <div class="inner">
+            <h2 class="f50 just-dance-bold uppercase" id="text-28">text28</h2>
+            <br>
+            <div class="twoboxes-container f15 inter">
+                <div class="twoboxes-left">
+                    <p><font>❌</font><font id="text-29"> text29</font></p>
+                </div>
+                <div class="twoboxes-right">
+                    <p><font>✅</font><font id="text-30">text30</font><font id="text-31"> text31</font></p>
+                </div>
+            </div>
+            <br><br>
+            <button class="slide-button f15 margin-top slide-down">
+            <div class="content">
+                <div class="icon">
+                <svg viewBox="0 0 24 24">
+                    <path d="M10 17l5-5-5-5v10z"/>
+                </svg>
+                </div>
+                <div class="text">Registrovat se 100% ZDARMA</div>
+            </div>
+            </button>
+            <br><br>
+            <br><br>
+            <div class="dropdowns-container f15 inter slide-up">
+                <div class="dropdown">
+                    <button class="dropbtn"><font id="text-32">❓ text32</font><font class="icon">+</font></button>
+                    <div class="dropdown-content">
+                        <p id="text-33">text33</p><br>
+                        <p id="text-34">text34</p><br>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn"><font id="text-35">❓ text35</font><font class="icon">+</font></button>
+                    <div class="dropdown-content">
+                        <p id="text-36">text36</p><br>
+                        <p id="text-37">text37</p><br>
+                        <p id="text-38">text38</p><br>
+                        <p id="text-39">text39</p><br>
+                        <p id="text-40">text40</p><br>
+                        <p id="text-41">text41</p><br>                        
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn"><font id="text-42">❓ text42</font><font class="icon">+</font></button>
+                    <div class="dropdown-content">
+                        <p id="text-43">text43</p><br>
+                        <p id="text-44">text44</p><br>
+                        <p id="text-45">text45</p><br>
+                        <p id="text-46">text46</p><br>
+                        <p id="text-47">text47</p><br>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn"><font id="text-48">❓ text48</font><font class="icon">+</font></button>
+                    <div class="dropdown-content">
+                        <p id="text-49">text49</p><br>
+                        <p id="text-50">text50</p><br>
+                        <p id="text-51">text51</p><br>
+                        <p id="text-52">text52</p><br>
+                        <p id="text-53">text53</p><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <br><br>
+</main>
+<footer>
+    <div class="f15 inter">
+        <p id="text-54">text54</p><br>
+        <p id="text-55">text55</p><br>
+        <p id="text-56">text56</p><br><br><br>
+    </div>
+
+</footer>
+
+
+<script>
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('run');
+      observer.unobserve(entry.target); // Remove observer after first run
+    }
+  });
+}, {
+  threshold: 0.1 // Trigger when 10% of the element is visible
+});
+
+document.querySelectorAll('.slide-up, .slide-down').forEach(el => {
+  observer.observe(el);
+});
+</script>
+
+
+
+<script>
+    document.querySelectorAll('.dropbtn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const dropdown = btn.parentElement;
+            dropdown.classList.toggle('active');
+
+            const icon = btn.querySelector('.icon');
+            icon.textContent = dropdown.classList.contains('active') ? '×' : '+';
+        });
+    });
+</script>
+
+
+<!-- ConvertKit Signup Form -->
+<script async data-uid="b15e43a422" src="https://zenluxury-newsletter.kit.com/b15e43a422/index.js"></script>
+</body>
+</html>
