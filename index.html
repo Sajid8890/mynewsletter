@@ -74,16 +74,16 @@ margin: 50px auto 0 auto;
 }
 .body-bg-image {
 position: absolute;
-top: 38%;
+top: 80%;
 left: 50%;
-min-width: 70%;
-min-height: 45%;
+min-width: 80%;
+min-height: 60%;
 transform: translate(-50%, -50%);
-background-image: url('./images/bg-img.png');
+background-image: url('images/bg-img.png');
 background-size: cover;
 background-position: center;
 z-index: -9999;
-opacity: 25%;
+opacity: 30%;
 }
 @font-face {
 font-family: Oswald;
@@ -232,9 +232,7 @@ width: 50%;
 .textpart{
 width: 50%;
 }
-.textpart .inner{
-padding: 50px;
-}
+
 .textpart-listelement{
 display: flex;
 text-align: left;
@@ -264,7 +262,7 @@ width: 50%;
 flex-direction: column;
 text-align: center;
 }
-.mbox3 .inner{
+.textpart .inner, .mbox3 .inner{
 padding: 50px;
 }
 .mbox3 .twoboxes-container{
@@ -345,12 +343,14 @@ color: #5e5e5e;}
 @media (max-width: 1199px) {
 body{
 max-width: 90% !important;
+margin: 0 auto;
 }
 .w-750{
 max-width: 100%;
 }
-
 }
+
+
 @media (max-width: 900px) {
 .mbox1{
 width: 90%;
@@ -358,7 +358,7 @@ margin: 0 auto;
 flex-direction: column-reverse;
 justify-content: flex-end;
 align-items: top;
-height: 700px;
+height: 1100px;
 border-radius: 30px;
 }
 .mbox2{
@@ -377,22 +377,21 @@ text-align: left;
 }
 .imgpart{
 min-width: 100%;
-height: 40%;
+min-height: 40%;
 }
 .mbox3{
+    width:90%;
 margin: 0 auto;
 }
 }
+
+
 @media (max-width: 750px) {
-body{
-max-width: 90% !important;
-margin: 0 auto;
-}
 .body-bg-image {
 position: absolute;
 top: 4%;
 left: 50%;
-min-width: 90%;
+min-width: 100%;
 min-height: 60%;
 transform: translate(-50%, -50%);
 background-image: url('./images/bg-img.png');
@@ -441,7 +440,9 @@ margin-right: 0;
 margin-top: 5px;
 font-size: 14px;
 }
-
+.textpart .inner, .mbox3 .inner{
+padding: 20px;
+}
 @keyframes slide-left {
 0% { transform: translateX(0); }
 100% { transform: translateX(-50%); }
@@ -450,6 +451,12 @@ font-size: 14px;
 width: 25px;
 height: 25px;
 margin-right: 10px;
+}
+.mbox3 .twoboxes-left, .mbox3 .twoboxes-right{
+padding: 10px;
+}
+.slide-button:hover .icon {
+transform: translateX(210px);
 }
 }
 @keyframes slide-down {
@@ -570,7 +577,6 @@ animation: slide-down 0.5s ease forwards;
 </div>
 </div>
 </div> -->
-<br><br>
 <div class="mbox3 margin-top slide-up">
 <div class="inner">
 <h2 class="f50 just-dance-bold uppercase" id="text-28">A new chapter begins…</h2>
@@ -594,7 +600,6 @@ animation: slide-down 0.5s ease forwards;
 <div class="text">Registrovat se 100% ZDARMA</div>
 </div>
 </button>
-<br><br>
 <br><br>
 <!-- <div class="dropdowns-container f15 inter slide-up">
 <div class="dropdown">
