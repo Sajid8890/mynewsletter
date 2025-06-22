@@ -533,6 +533,21 @@ animation: slide-up 1s ease forwards;
 animation: slide-down 0.5s ease forwards;
 }
 </style>
+<style>
+html, body {
+  overflow-x: hidden;
+  overflow-y: auto; /* allows vertical scrolling */
+  height: auto !important;
+}
+
+.formkit-modal {
+  z-index: 9999 !important;
+}
+
+.body-bg-image {
+  z-index: -1 !important; /* lower it */
+}
+</style>
 </head>
 <body>
 <header>
