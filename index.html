@@ -7,9 +7,9 @@
 <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
 <style>
 :root {
-    /* -------------------Replace this blue color with any other color you preffer friend---------------------- */
+    /* -----------------------Replace this blue color with any other color you preffer friend---------------------- */
   --main-color: #1700c7;
-    /* --------------------------------------------------------------------------------------------------------- */
+    /* ------------------------------------------------------------------------------------------------------------ */
 }
 *{
 padding: 0;
@@ -169,10 +169,13 @@ transition: transform 0.3s ease;
 }
 .slide-button .icon,
 .slide-button .text {
+text-decoration: none;
+color: #000;
 transition: transform 0.3s ease;
 display: flex;
 align-items: center;
 }
+
 .slide-button .icon {
 width: 25px;
 height: 25px;
@@ -338,7 +341,9 @@ content: '×';
 footer{
 text-align: center;
 color: #5e5e5e;}
-
+.slide-button .text {
+    line-height: 40px;
+}
 
 
 
@@ -475,7 +480,7 @@ font-size: 12px !important;
 width: 220px !important;
 }
 .slide-button:hover .icon {
-transform: translateX(170px);
+transform: translateX(170px) !important;
 }
 .mbox3 .twoboxes-container{
     flex-direction: column;
@@ -540,6 +545,7 @@ animation: slide-down 0.5s ease forwards;
 <div class="w-750">
 <div>
 <p class="f20 inter margin-top w-750 color-ffffffcc"><font id="text-6">3 SteSWps how you can do it yourself →</font><font id="text-7"><strong> WITHOUT</strong> showing your face, spending hours editing, or needing any technical skills.</font></p>
+<a data-formkit-toggle="cb09a93a63" href="https://zenluxury-newsletter.kit.com/cb09a93a63">
 <button class="slide-button f15 margin-top slide-down">
 <div class="content">
 <div class="icon">
@@ -547,10 +553,13 @@ animation: slide-down 0.5s ease forwards;
 <path d="M10 17l5-5-5-5v10z"/>
 </svg>
 </div>
-<div class="text">Register 100% FREE</div>
+<!-- <div class="text">Registrovat se 100% ZDARMA</div> -->
+<a data-formkit-toggle="cb09a93a63" class="text" href="https://zenluxury-newsletter.kit.com/cb09a93a63">SIGNUP HERE - 100% FREE</a>
 </div>
 </button>
+</a>
 </div>
+
 <div class="slider-container oswald margin-top color-ffffffcc f15">
 <ul class="slider-track uppercase letter-spacing-1">
 <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 22px; height: 22px; fill: var(--main-color); display: inline-block; vertical-align: middle;"><path d="M20.285 6.709l-11.31 11.31-5.657-5.657 1.414-1.414 4.243 4.243 9.896-9.896z"/></svg><font id="text-8">WORK FROM ANYWHERE, ANYTIME</font></li>
@@ -619,10 +628,10 @@ animation: slide-down 0.5s ease forwards;
 <br>
 <div class="twoboxes-container color-ffffffcc f16 inter">
 <div class="twoboxes-left">
-<p><font>❌ </font><font id="text-29"><strong>Do nothing and try to succeed with outdated business models</strong> that are saturated, require big investments, and take up a lot of your time.</font></p>
+<p><font>❌</font><font id="text-29"><strong>Do nothing and try to succeed with outdated business models</strong> that are saturated, require big investments, and take up a lot of your time.</font></p>
 </div>
 <div class="twoboxes-right">
-<p><font>✅ </font><font id="text-30">Get instant access</font><font id="text-31"> to free tools, tips, and proven systems — all from someone actually doing it, not just talking about it.</font></p>
+<p><font>✅</font><font id="text-30">Get instant access</font><font id="text-31"> to free tools, tips, and proven systems — all from someone actually doing it, not just talking about it.</font></p>
 </div>
 </div>
 <button class="slide-button f15 margin-top slide-down">
@@ -632,7 +641,7 @@ animation: slide-down 0.5s ease forwards;
 <path d="M10 17l5-5-5-5v10z"/>
 </svg>
 </div>
-<div class="text">Register 100% FREE</div>
+<a data-formkit-toggle="cb09a93a63" class="text" href="https://zenluxury-newsletter.kit.com/cb09a93a63">SIGNUP HERE - 100% FREE</a>
 </div>
 </button>
 <br><br>
@@ -724,6 +733,6 @@ icon.textContent = dropdown.classList.contains('active') ? '×' : '+';
 
 
 <!-- ConvertKit Signup Form -->
-<script async data-uid="b15e43a422" src="https://zenluxury-newsletter.kit.com/b15e43a422/index.js"></script>
+<script async data-uid="cb09a93a63" src="https://zenluxury-newsletter.kit.com/cb09a93a63/index.js"></script>
 </body>
 </html>
