@@ -6,6 +6,11 @@
 <title>Webpage</title>
 <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
 <style>
+:root {
+    /* -------------------Replace this blue color with any other color you preffer friend---------------------- */
+  --main-color: #1700c7;
+    /* --------------------------------------------------------------------------------------------------------- */
+}
 *{
 padding: 0;
 margin: 0;
@@ -42,7 +47,7 @@ font-size: 50px;
 font-size: 67px;
 }
 #text-2, #text-4{color: #fff;}
-#text-3, #text-5,  #text-13,  #text-15, .colored{color: #1700c7;}
+#text-3, #text-5,  #text-13,  #text-15, .colored{color: var(--main-color);}
 #text-6, #text-25, #text-30{color: rgb(0, 255, 162); font-weight: 600;}
 .color-ffffffcc{
 color: #ffffffcc;
@@ -385,7 +390,6 @@ margin: 0 auto;
 }
 }
 
-
 @media (max-width: 750px) {
 .body-bg-image {
 position: absolute;
@@ -401,19 +405,19 @@ z-index: -9999;
 opacity: 25%;
 }
 .f15{
-font-size: 13px;
+font-size: 12px !important;
 }
 .f17{
-font-size: 16px;
+font-size: 16px !important;
 }
 .f20{
-font-size: 16px;
+font-size: 16px !important;
 }
 .f50{
-font-size: 35px;
+font-size: 35px !important;
 }
 .f67{
-font-size: 40px;
+font-size: 40px !important;
 }
 .slider-container {
 text-align: left;
@@ -440,8 +444,11 @@ margin-right: 0;
 margin-top: 5px;
 font-size: 14px;
 }
-.textpart .inner, .mbox3 .inner{
-padding: 20px;
+.textpart .inner{
+padding: 50px 15px;
+}
+.mbox3 .inner{
+padding: 50px 30px;
 }
 @keyframes slide-left {
 0% { transform: translateX(0); }
@@ -455,10 +462,25 @@ margin-right: 10px;
 .mbox3 .twoboxes-left, .mbox3 .twoboxes-right{
 padding: 10px;
 }
+.slide-button {
+padding: 10px 0px;
+font-size: 12px;
+width: 250px;
+}
 .slide-button:hover .icon {
-transform: translateX(210px);
+transform: translateX(190px);
+}
+.mbox3 .twoboxes-container{
+    flex-direction: column;
+}
+.mbox3 .twoboxes-left, .mbox3 .twoboxes-right{
+width: 100%;
 }
 }
+
+
+
+
 @keyframes slide-down {
 from {
 opacity: 0;
@@ -497,14 +519,14 @@ animation: slide-down 0.5s ease forwards;
 <body>
 <header>
 <div>
-<p id="text-1" class="f15 letter-spacing-1 oswald margin-top color-ffffffcc uppercase slide-down">📣 ATTENTION! FREE COMMUNITY REVEALS</p>
+<p id="text-1" class="f15 letter-spacing-1 oswald margin-top color-ffffffcc uppercase slide-down">📣 ATTENTION! <strong>FREE COMMUNITY</strong> REVEALS</p>
 </div>
 <div>
 <h1 class="just-dance-bold f67 margin-top uppercase"><font id="text-2">How I built an</font><font id="text-3"> online income </font><font id="text-4"> with digital dropshipping and theme pages,</font><font id="text-5"> working only 1 to 2 hours a day</font><font> no inventory or personal brand.</font></h1>
 </div>
 <div class="w-750">
 <div>
-<p class="f20 inter margin-top w-750 color-ffffffcc"><font id="text-6">3 Steps how you can do it yourself →</font><font id="text-7"><strong> WITHOUT</strong> showing your face, spending hours editing, or needing any technical skills.</font></p>
+<p class="f20 inter margin-top w-750 color-ffffffcc"><font id="text-6">3 SteSWps how you can do it yourself →</font><font id="text-7"><strong> WITHOUT</strong> showing your face, spending hours editing, or needing any technical skills.</font></p>
 <button class="slide-button f15 margin-top slide-down">
 <div class="content">
 <div class="icon">
@@ -518,10 +540,10 @@ animation: slide-down 0.5s ease forwards;
 </div>
 <div class="slider-container oswald margin-top color-ffffffcc f15">
 <ul class="slider-track uppercase letter-spacing-1">
-<li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 22px; height: 22px; fill: #1700c7; display: inline-block; vertical-align: middle;" focusable="false" color="var(--token-5c149711-265d-4bcd-a011-9af22561241a, rgb(227, 53, 36))" style="user-select: none; width: 100%; height: 100%; display: inline-block; fill: var(--token-5c149711-265d-4bcd-a011-9af22561241a, rgb(227, 53, 36)); color: var(--token-5c149711-265d-4bcd-a011-9af22561241a, rgb(227, 53, 36)); flex-shrink: 0;"><g color="var(--token-5c149711-265d-4bcd-a011-9af22561241a, rgb(227, 53, 36))" weight="regular"><path d="M245.11,60.68c-7.65-13.19-27.84-16.16-58.5-8.66A95.93,95.93,0,0,0,32,128a98,98,0,0,0,.78,12.31C5.09,169,5.49,186,10.9,195.32,16,204.16,26.64,208,40.64,208a124.11,124.11,0,0,0,28.79-4A95.93,95.93,0,0,0,224,128a97.08,97.08,0,0,0-.77-12.25c12.5-13,20.82-25.35,23.65-35.92C248.83,72.51,248.24,66.07,245.11,60.68ZM128,48a80.11,80.11,0,0,1,78,62.2c-17.06,16.06-40.15,32.53-62.07,45.13C116.38,171.14,92.48,181,73.42,186.4A79.94,79.94,0,0,1,128,48ZM24.74,187.29c-1.46-2.51-.65-7.24,2.22-13a79.05,79.05,0,0,1,10.29-15.05,96,96,0,0,0,18,31.32C38,193.46,27.24,191.61,24.74,187.29ZM128,208a79.45,79.45,0,0,1-38.56-9.94,370,370,0,0,0,62.43-28.86c21.58-12.39,40.68-25.82,56.07-39.08A80.07,80.07,0,0,1,128,208ZM231.42,75.69c-1.7,6.31-6.19,13.53-12.63,21.13a95.69,95.69,0,0,0-18-31.35c14.21-2.35,27.37-2.17,30.5,3.24C232.19,70.28,232.24,72.63,231.42,75.69Z"></path></g></svg><font id="text-8">WORK FROM ANYWHERE, ANYTIME</font></li>
-<li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 22px; height: 22px; fill: #1700c7;display: inline-block; vertical-align: middle;" focusable="false" color="var(--token-5c149711-265d-4bcd-a011-9af22561241a, rgb(227, 53, 36))" style="user-select: none; width: 100%; height: 100%; display: inline-block; fill: var(--token-5c149711-265d-4bcd-a011-9af22561241a, rgb(227, 53, 36)); color: var(--token-5c149711-265d-4bcd-a011-9af22561241a, rgb(227, 53, 36)); flex-shrink: 0;"><g color="var(--token-5c149711-265d-4bcd-a011-9af22561241a, rgb(227, 53, 36))" weight="regular"><path d="M128,88a40,40,0,1,0,40,40A40,40,0,0,0,128,88Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,152ZM240,56H16a8,8,0,0,0-8,8V192a8,8,0,0,0,8,8H240a8,8,0,0,0,8-8V64A8,8,0,0,0,240,56ZM193.65,184H62.35A56.78,56.78,0,0,0,24,145.65v-35.3A56.78,56.78,0,0,0,62.35,72h131.3A56.78,56.78,0,0,0,232,110.35v35.3A56.78,56.78,0,0,0,193.65,184ZM232,93.37A40.81,40.81,0,0,1,210.63,72H232ZM45.37,72A40.81,40.81,0,0,1,24,93.37V72ZM24,162.63A40.81,40.81,0,0,1,45.37,184H24ZM210.63,184A40.81,40.81,0,0,1,232,162.63V184Z"></path></g></svg><font id="text-9">KEEP 100% OF THE PROFIT</font></li>
-<li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 22px; height: 22px; fill: #1700c7; display: inline-block; vertical-align: middle;" focusable="false" color="var(--token-5c149711-265d-4bcd-a011-9af22561241a, rgb(227, 53, 36))" style="user-select: none; width: 100%; height: 100%; display: inline-block; fill: var(--token-5c149711-265d-4bcd-a011-9af22561241a, rgb(227, 53, 36)); color: var(--token-5c149711-265d-4bcd-a011-9af22561241a, rgb(227, 53, 36)); flex-shrink: 0;"><g color="var(--token-5c149711-265d-4bcd-a011-9af22561241a, rgb(227, 53, 36))" weight="regular"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></g></svg><font id="text-10">BEGINNER-FRIENDLY SYSTEM</font></li>
-<li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 22px; height: 22px; fill: #1700c7; display: inline-block; vertical-align: middle;" focusable="false" color="var(--token-5c149711-265d-4bcd-a011-9af22561241a, rgb(227, 53, 36))" style="user-select: none; width: 100%; height: 100%; display: inline-block; fill: var(--token-5c149711-265d-4bcd-a011-9af22561241a, rgb(227, 53, 36)); color: var(--token-5c149711-265d-4bcd-a011-9af22561241a, rgb(227, 53, 36)); flex-shrink: 0;"><g color="var(--token-5c149711-265d-4bcd-a011-9af22561241a, rgb(227, 53, 36))" weight="regular"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></g></svg><font id="text-11">EARN WHILE YOU SLEEP</font></li>
+<li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 22px; height: 22px; fill: var(--main-color); display: inline-block; vertical-align: middle;"><path d="M20.285 6.709l-11.31 11.31-5.657-5.657 1.414-1.414 4.243 4.243 9.896-9.896z"/></svg><font id="text-8">WORK FROM ANYWHERE, ANYTIME</font></li>
+<li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 22px; height: 22px; fill: var(--main-color); display: inline-block; vertical-align: middle;"><path d="M20.285 6.709l-11.31 11.31-5.657-5.657 1.414-1.414 4.243 4.243 9.896-9.896z"/></svg><font id="text-9">KEEP 100% OF THE PROFIT</font></li>
+<li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 22px; height: 22px; fill: var(--main-color); display: inline-block; vertical-align: middle;"><path d="M20.285 6.709l-11.31 11.31-5.657-5.657 1.414-1.414 4.243 4.243 9.896-9.896z"/></svg><font id="text-10">BEGINNER-FRIENDLY SYSTEM</font></li>
+<li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 22px; height: 22px; fill: var(--main-color); display: inline-block; vertical-align: middle;"><path d="M20.285 6.709l-11.31 11.31-5.657-5.657 1.414-1.414 4.243 4.243 9.896-9.896z"/></svg><font id="text-11">EARN WHILE YOU SLEEP</font></li>
 </ul>
 </div>
 </div>
@@ -534,26 +556,27 @@ animation: slide-down 0.5s ease forwards;
 <div class="textpart">
 <div class="inner">
 <h2 class="f50 just-dance-bold uppercase"><font id="text-12">Avoid</font><font id="text-13"> common mistakes</font><font id="text-14"> that could cost you a lot of </font><font class="colored">time and money</font></h2>
+<br>
 <div id="text-15" class="f17 oswald margin-top-x uppercase letter-spacing-2">In this FREE community you'll learn...</div>
 <div class="f16 inter word-spacing-2 letter-spacing">
 <div class="textpart-listelement">
-<div class="icon"><svg xmlns="http://www.w3.org/2000/svg" style="width: 22px; height: 22px; fill: #1700c7; display: inline-block; vertical-align: middle;" focusable="false" viewBox="0 0 24 24" color="var(--token-1f6b6ba9-6b5e-47fd-acf6-4c5572fd8bdd, rgb(227, 53, 36))" style="user-select: none; width: 100%; height: 100%; display: inline-block; fill: var(--token-1f6b6ba9-6b5e-47fd-acf6-4c5572fd8bdd, rgb(227, 53, 36)); flex-shrink: 0;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path></svg></div>
+<div class="icon"><svg xmlns="http://www.w3.org/2000/svg" style="width: 22px; height: 22px; fill: var(--main-color); display: inline-block; vertical-align: middle;" focusable="false" viewBox="0 0 24 24" color="var(--token-1f6b6ba9-6b5e-47fd-acf6-4c5572fd8bdd, rgb(227, 53, 36))" style="user-select: none; width: 100%; height: 100%; display: inline-block; fill: var(--token-1f6b6ba9-6b5e-47fd-acf6-4c5572fd8bdd, rgb(227, 53, 36)); flex-shrink: 0;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path></svg></div>
 <p id="text-16">What is "A.I. Digital Dropshipping" and proof why it’s the <strong>biggest online business opportunity in the last 20 years.</strong></p>
 </div>
 <div class="textpart-listelement">
-<div class="icon"><svg xmlns="http://www.w3.org/2000/svg" style="width: 22px; height: 22px; fill: #1700c7; display: inline-block; vertical-align: middle;" focusable="false" viewBox="0 0 24 24" color="var(--token-1f6b6ba9-6b5e-47fd-acf6-4c5572fd8bdd, rgb(227, 53, 36))" style="user-select: none; width: 100%; height: 100%; display: inline-block; fill: var(--token-1f6b6ba9-6b5e-47fd-acf6-4c5572fd8bdd, rgb(227, 53, 36)); flex-shrink: 0;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path></svg></div>
+<div class="icon"><svg xmlns="http://www.w3.org/2000/svg" style="width: 22px; height: 22px; fill: var(--main-color); display: inline-block; vertical-align: middle;" focusable="false" viewBox="0 0 24 24" color="var(--token-1f6b6ba9-6b5e-47fd-acf6-4c5572fd8bdd, rgb(227, 53, 36))" style="user-select: none; width: 100%; height: 100%; display: inline-block; fill: var(--token-1f6b6ba9-6b5e-47fd-acf6-4c5572fd8bdd, rgb(227, 53, 36)); flex-shrink: 0;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path></svg></div>
 <div id="text-17">How to set up <strong>automated seller</strong> that sells and ships your products on autopilot even while you sleep—<strong>in just 15 minutes</strong> (no tech skills needed)</div>
 </div>
 <div class="textpart-listelement">
-<div class="icon"><svg xmlns="http://www.w3.org/2000/svg" style="width: 22px; height: 22px; fill: #1700c7; display: inline-block; vertical-align: middle;" focusable="false" viewBox="0 0 24 24" color="var(--token-1f6b6ba9-6b5e-47fd-acf6-4c5572fd8bdd, rgb(227, 53, 36))" style="user-select: none; width: 100%; height: 100%; display: inline-block; fill: var(--token-1f6b6ba9-6b5e-47fd-acf6-4c5572fd8bdd, rgb(227, 53, 36)); flex-shrink: 0;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path></svg></div>
+<div class="icon"><svg xmlns="http://www.w3.org/2000/svg" style="width: 22px; height: 22px; fill: var(--main-color); display: inline-block; vertical-align: middle;" focusable="false" viewBox="0 0 24 24" color="var(--token-1f6b6ba9-6b5e-47fd-acf6-4c5572fd8bdd, rgb(227, 53, 36))" style="user-select: none; width: 100%; height: 100%; display: inline-block; fill: var(--token-1f6b6ba9-6b5e-47fd-acf6-4c5572fd8bdd, rgb(227, 53, 36)); flex-shrink: 0;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path></svg></div>
 <div id="text-18">My <strong>honest feedback</strong> and <strong>improvement suggestions</strong> that will definitely move your project forward. (Based on my proven methods)</div>
 </div>
 <div class="textpart-listelement">
-<div class="icon"><svg xmlns="http://www.w3.org/2000/svg" style="width: 22px; height: 22px; fill: #1700c7; display: inline-block; vertical-align: middle;" focusable="false" viewBox="0 0 24 24" color="var(--token-1f6b6ba9-6b5e-47fd-acf6-4c5572fd8bdd, rgb(227, 53, 36))" style="user-select: none; width: 100%; height: 100%; display: inline-block; fill: var(--token-1f6b6ba9-6b5e-47fd-acf6-4c5572fd8bdd, rgb(227, 53, 36)); flex-shrink: 0;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path></svg></div>
+<div class="icon"><svg xmlns="http://www.w3.org/2000/svg" style="width: 22px; height: 22px; fill: var(--main-color); display: inline-block; vertical-align: middle;" focusable="false" viewBox="0 0 24 24" color="var(--token-1f6b6ba9-6b5e-47fd-acf6-4c5572fd8bdd, rgb(227, 53, 36))" style="user-select: none; width: 100%; height: 100%; display: inline-block; fill: var(--token-1f6b6ba9-6b5e-47fd-acf6-4c5572fd8bdd, rgb(227, 53, 36)); flex-shrink: 0;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path></svg></div>
 <div id="text-19">You'll <strong>learn from my personal experience</strong> built over years of testing and hundreds of thousands invested — <saving>you time and money</saving> on your own journey.</div>
 </div>
 <!-- <div class="textpart-listelement">
-<div class="icon"><svg xmlns="http://www.w3.org/2000/svg" style="width: 22px; height: 22px; fill: #1700c7; display: inline-block; vertical-align: middle;" focusable="false" viewBox="0 0 24 24" color="var(--token-1f6b6ba9-6b5e-47fd-acf6-4c5572fd8bdd, rgb(227, 53, 36))" style="user-select: none; width: 100%; height: 100%; display: inline-block; fill: var(--token-1f6b6ba9-6b5e-47fd-acf6-4c5572fd8bdd, rgb(227, 53, 36)); flex-shrink: 0;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path></svg></div>
+<div class="icon"><svg xmlns="http://www.w3.org/2000/svg" style="width: 22px; height: 22px; fill: var(--main-color); display: inline-block; vertical-align: middle;" focusable="false" viewBox="0 0 24 24" color="var(--token-1f6b6ba9-6b5e-47fd-acf6-4c5572fd8bdd, rgb(227, 53, 36))" style="user-select: none; width: 100%; height: 100%; display: inline-block; fill: var(--token-1f6b6ba9-6b5e-47fd-acf6-4c5572fd8bdd, rgb(227, 53, 36)); flex-shrink: 0;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path></svg></div>
 <div id="text-20">text20</div>
 </div> -->
 </div>
